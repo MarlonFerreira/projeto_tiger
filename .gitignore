@@ -1,0 +1,9 @@
+back/node_modules
+back/package-lock.json
+back/src/helpers/log/access.log
+
+front/node_modules
+front/.vscode
+front/package-lock.json
+front/dist
+front/fonts

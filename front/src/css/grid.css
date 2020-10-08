@@ -1,0 +1,42 @@
+.row:before,
+.row:after {
+    display: table;
+    content: " ";
+    clear: both;
+}
+.custom-container {
+    width: 360px;
+    margin: 0 auto;
+    position: relative;
+}
+.custom-one,
+.custom-one-third,
+.custom-two-third,
+.custom-one-fourth,
+.custom-half {
+    width: 100%;
+}
+
+@media only screen and (min-width: 360px) {
+    .custom-one {
+        width: 100%;
+    }
+    .custom-half {
+        width: calc(100% / 2);
+    }
+    .custom-one-third {
+        width: calc(100% / 3);
+    }
+    .custom-one-fourth {
+        width: calc(100% / 4);
+    }
+    .custom-two-thirds {
+        width: calc(100% / 3 * 2);
+    }
+    .custom-column {
+        float: left;
+    }
+}
+
+
+

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tiger Shop</title>
+  <link rel="icon" type=".tigre.svg" href="./index.html">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header">
+
+      <!-- NAV SUPERIOR -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light nav-topo">
+        <div class="container-fluid">
+
+          <!-- LOGO E MARCA -->
+          <a class="navbar-brand nav-logo" href="#">
+            <img src="tigre.svg" alt="Tiger Foods">
+          </a>
+          <!-- LOGO E MARCA -->
+
+          <!-- BUSCA -->
+          <form class="d-flex nav-header-busca">
+            <button class="btn nav-btn-lupa" type="submit">
+            </button>
+            <input class="form-control mr-2" type="search" placeholder="Buscar" aria-label="Buscar">
+          </form>
+          <!-- BUSCA -->
+
+          <!-- TOGGLE -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- TOGGLE -->
+
+          <!-- OPCOES CONTA USUARIO -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="nav-header-user">
+              <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                <li>
+                  <a class="nav-link" href="./entrar.html">
+                    <img src="door-open.svg" alt="Entrar">
+                    Entrar
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-link" href="#">
+                    <img src="heart.svg" alt="Desejo">
+                    Lista de desejos
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-link" href="#">
+                    <img src="cart3.svg" alt="Carrinho">
+                    Carrinho
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- OPCOES CONTA USUARIO -->
+        </div>
+      </nav>
+      <!-- NAV SUPERIOR -->
+
+
+
+      <!-- NAV INFERIOR -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light nav-inferior">
+        <div class="container-fluid" id="responsive-nav">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="nav-header-menu">
+              <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="active nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Promocoes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Categorias</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Laptops</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Smartphones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Cameras</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Acessorios</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- NAV INFERIOR -->
+
+
+    </div>
+  </header>
+  <!-- HEADER -->
+
+
+  <main>
+
+    <!-- top footer -->
+    <div class="section">
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <!-- <div class="row"> -->
+
+        <form id="app" @submit="checkForm" method="post" class="row g-3">
+          <div class="col-md-3 col-xs-6">
+            <div class="input-group mb-3">
+              <p>
+                <label for="name">Login: </label>
+                <!-- <input type="text" name="name" id="name" v-model="name"> -->
+                <input type="text" name="login" id="inputLogin" v-model="login" class="form-control" placeholder="Login"
+                  aria-label="Usuario" aria-describedby="basic-addon1">
+              </p>
+              <p>
+                <label for="password">Senha: </label>
+                <!-- <input type="text" name="name" id="name" v-model="name"> -->
+                <input type="password" name="password" autocomplete="on" id="inputPassword" v-model="password"
+                  class="form-control" placeholder="Senha" aria-label="Senha" aria-describedby="basic-addon2">
+              </p>
+            </div>
+
+            <div class="col-12">
+              <p>
+                <input id="btnEntrar" type="submit" value="Entrar" class="btn btn-primary btncadastrar">
+              </p>
+              <a class="btn btn-primary btncadastrar" href="./cadastrar.html">
+                Crie sua conta
+              </a>
+            </div>
+          </div>
+        </form>
+
+        <!-- <button href="./cadastrar.html" id="btnCadastrar" class="btn btn-primary btncadastrar">
+          Cadastrar
+        </button> -->
+        <!-- <input href="./cadastrar.html" id="btnCadastrar" type="submit" value="Cadastrar" class="btn btn-primary btncadastrar"> -->
+
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+  </main>
+
+
+  <footer>
+
+  </footer>
+
+</body>
+
+</html>
