@@ -3,10 +3,11 @@ const controller = require('./controller')
 const { check, validationResult } = require('express-validator');
 
 router.post('/registro', [
-    check('cliente_nome').isLength(3, 100),
-    check('cliente_login').exists(),
-    check('cliente_senha').exists()
+    check('nome').isLength(3, 100),
+    check('email').exists(),
+    check('senha').exists()
 ], async function (req, res) {
+    console.log(req.body, '1')
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(422).json({ errors: errors.array() });

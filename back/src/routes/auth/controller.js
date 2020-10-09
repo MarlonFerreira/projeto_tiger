@@ -8,8 +8,7 @@ var controller = {
     postOne: async function (req, res) {
         let _context = await DefineModelMysqlHelper.defineModelContext(clienteSchema)
         console.log('ENTROU', req.body)
-        let result = await _context.read({ cliente_login: req.body.login, cliente_status: true })
-
+        let result = await _context.read({ cliente_email: req.body.login, cliente_status: true })
         if (Object.keys(result).length === 0) {
             return res.status(400).send('Usuario ou senha invalidos')
         }
