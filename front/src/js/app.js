@@ -1,9 +1,8 @@
 import 'bootstrap';
 import 'vue';
 
-import './index/index';
-
-import './entrar/entrar';
+import entrar from './entrar/entrar';
+import cadastrar from './cadastrar/cadastrar';
 
 import '../css/styles.scss';
 
@@ -16,3 +15,14 @@ import iconLupa from '../images/search.svg';
 import iconPorta from '../images/door-open.svg';
 import iconCoracao from '../images/heart.svg';
 import iconCarrinho from '../images/cart3.svg';
+
+function onLoad() {
+    let urlPath = window.location.pathname
+    if (`${urlPath}` === `/entrar.html`) {
+        entrar()
+    }
+    if (`${urlPath}` === `/cadastrar.html`) {
+        cadastrar()
+    }
+}
+window.onload = onLoad

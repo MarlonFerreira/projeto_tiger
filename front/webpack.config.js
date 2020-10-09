@@ -1,13 +1,21 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
-    entry: [
-        'babel-polyfill',
-        './src/js/app.js'],
+    mode: 'development',
+    entry:
+        [
+            // 'babel-polyfill',
+            './src/js/app.js'
+        ],
+    devtool: 'inline-source-map',
     output: {
+        // // filename: '[name].js',
+        // path: __dirname + '/dist',
+        // chunkFilename: '[id].[chunkhash].js'
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist')
     },
@@ -58,13 +66,21 @@ module.exports = {
         }
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './src/index.html'
+            template: './src/index.html',
+            // chunk: ['index']
         }),
         new HtmlWebpackPlugin({
             filename: 'entrar.html',
-            template: './src/entrar.html'
+            template: './src/entrar.html',
+            // chunk: ['entrar']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'cadastrar.html',
+            template: './src/cadastrar.html',
+            // chunk: ['cadastrar']
         }),
         new MiniCssExtractPlugin({
             filename: 'styles.css'
