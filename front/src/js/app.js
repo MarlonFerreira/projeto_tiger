@@ -2,7 +2,14 @@ import 'bootstrap';
 import 'vue';
 
 import entrar from './entrar/entrar';
+import entrarLogica from './entrar/logica';
+import entrarTela from './entrar/tela';
+
 import cadastrar from './cadastrar/cadastrar';
+import cadastrarLogica from './cadastrar/logica'
+import cadastrarTela from './cadastrar/tela'
+
+import ajax from './util/ajax';
 
 import '../css/styles.scss';
 
@@ -19,10 +26,10 @@ import iconCarrinho from '../images/cart3.svg';
 function onLoad() {
     let urlPath = window.location.pathname
     if (`${urlPath}` === `/entrar.html`) {
-        entrar()
+        entrar(ajax, entrarLogica, entrarTela)
     }
     if (`${urlPath}` === `/cadastrar.html`) {
-        cadastrar()
+        cadastrar(ajax, cadastrarLogica, cadastrarTela)
     }
 }
 window.onload = onLoad
