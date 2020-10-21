@@ -14,6 +14,7 @@ var controller = {
         }
         let _cliente_id = result[0].cliente_id
         let _cliente_role = result[0].role
+        let _cliente_nome = result[0].cliente_nome
 
         compare(req.body.senha, result[0].cliente_senha, function (err, result) {
             if (err)
@@ -28,7 +29,7 @@ var controller = {
                 // });
                 console.log('SAIU')
                 console.log('------')
-                return res.status(200).send({ token: token, auth: true })
+                return res.status(200).send({ token: token, nome: _cliente_nome, auth: true })
                 // console.log(res)
                 // return res.status(200).end()
 
