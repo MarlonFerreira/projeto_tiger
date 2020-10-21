@@ -1,7 +1,6 @@
 export default class Ajax {
 
     static requisicaoAjaxPostJson(URL, dados) {
-        console.log('Entrou REQUISICAO')
         return fetch(URL, {
             mode:'cors',
             method: 'POST',

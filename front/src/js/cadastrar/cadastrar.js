@@ -1,5 +1,4 @@
 export default function onLoad(Ajax, LogicaCadastrar, TelaCadastrar) {
-    console.log(Ajax)
     let dependencias = {
         tela: TelaCadastrar,
         ajax: Ajax

@@ -13,7 +13,12 @@ export default class EntrarLogica {
         let dados = this.tela.lerLogin();
         let URL = 'http://localhost:8082/login';
         let data = await this.ajax.requisicaoAjaxPostJson(URL, dados);
-        document.cookie = `token=${data.token}`;
-        window.location.href = 'http://localhost:8081/index.html';
+        if (data === 0) {
+
+        } else {
+            document.cookie = `token=${data.token}`;
+            document.cookie = `name=${data.nome}`;
+            window.location.href = 'http://localhost:8081/index.html';
+        }
     }
 }
